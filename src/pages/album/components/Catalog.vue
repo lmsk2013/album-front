@@ -61,7 +61,7 @@ export default {
       height 88%
       .item-img
         overflow hidden
-        width 50%
+        width 49.5%
         height 0
         padding-bottom 39.4%
         float left
