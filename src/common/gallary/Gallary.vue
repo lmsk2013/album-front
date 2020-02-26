@@ -9,8 +9,6 @@
             :key="index">
               <img class="gallary-img" :src="item"/>
           </swiper-slide>
-          <!-- Optional controls -->
-          <div class="swiper-pagination"  slot="pagination"></div>
       </swiper>
     </div>
   </div>
@@ -30,10 +28,6 @@ export default {
   data () {
     return {
       swiperOption: {
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction'
-        },
         observer: true,
         observeParents: true
       }

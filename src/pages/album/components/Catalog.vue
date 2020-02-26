@@ -4,6 +4,7 @@
       <div class="item-img"
         v-for="item of catalogItems"
         :key="item.id"
+        @click="handleClick(item.id)"
         >
         <img :src="item.imgUrl" class="img-content"/>
       </div>
@@ -43,6 +44,13 @@ export default {
         imgUrl: 'https://pre.ih5.cn/v3/files/3859256/18087/A1UWPRbF.png'
       }]
     }
+  },
+  methods: {
+    handleClick (id) {
+      if (id !== '1') {
+        this.$router.push('/gallary/' + id)
+      }
+    }
   }
 }
 </script>
@@ -65,6 +73,7 @@ export default {
         height 0
         padding-bottom 39.4%
         float left
+        background $bgColor
         .img-content
           padding .08rem
           width 100%
